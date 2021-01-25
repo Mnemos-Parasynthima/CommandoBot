@@ -18,7 +18,13 @@ module.exports = class NameCommand extends Command {
       throttling: {
         usages: #,
         duration: #,
-      }
+      },
+      args: [
+        {
+          key: '',
+          
+        }
+      ]
     });
   }
 
