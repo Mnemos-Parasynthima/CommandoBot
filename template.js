@@ -2,7 +2,7 @@
 /*
 const { Command } = require('discord.js-commando');
 
-module.exports = class []Command extends Command {
+module.exports = class NameCommand extends Command {
   constructor(client) {
     super(client, {
       name: '',
@@ -14,6 +14,7 @@ module.exports = class []Command extends Command {
       clientPermissions: ,
       ownerOnly: boolean,
       userPermissions: ,
+      format: '',
       throttling: {
         usages: #,
         duration: #,
@@ -21,7 +22,7 @@ module.exports = class []Command extends Command {
     });
   }
 
-  run(message) {
+  run(msg) {
     //command
   }
 };*/
