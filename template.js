@@ -22,13 +22,14 @@ module.exports = class NameCommand extends Command {
       args: [
         {
           key: '',
-          
+          prompt: '',
+          type: ''
         }
       ]
     });
   }
 
-  run(msg) {
+  run(msg, {  }) {
     //command
   }
 };*/
