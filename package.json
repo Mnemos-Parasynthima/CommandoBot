@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "discord.js-commando": "git+https://github.com/discordjs/Commando.git"
+    "discord.js-commando": "git+https://github.com/discordjs/Commando.git",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
   "scripts": {
