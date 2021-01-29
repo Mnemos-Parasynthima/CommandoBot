@@ -11,6 +11,7 @@ client.registry
   .registerGroups([
     ['anime', 'Anime!!'],
     ['fun', 'Fun stuff'],
+    ['misc', 'Misc!!'],
     ['mod', 'Moderation'],
     ['nsfw', 'NSFW!!'],
   ])
