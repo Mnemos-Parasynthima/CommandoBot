@@ -5,27 +5,31 @@ const { Command } = require('discord.js-commando');
 module.exports = class NameCommand extends Command {
   constructor(client) {
     super(client, {
-      name: '',
-      aliases: ['', ''],
-      group: '',
-      memberName: '',
-      description: '',
-      guildOnly: boolean,
-      clientPermissions: ,
-      ownerOnly: boolean,
-      userPermissions: ,
-      format: '',
+      name: String,
+      aliases: Array,
+      group: String,
+      memberName: String,
+      description: String,
+      format: String,
+      guildOnly: Boolean,
+      ownerOnly: Boolean,
+      clientPermissions: Array,
+      userPermissions: Array,
+      nsfw: Boolean,
       throttling: {
-        usages: #,
-        duration: #,
+        usages: Integer,
+        duration: Integer,
       },
       args: [
         {
-          key: '',
-          prompt: '',
-          type: ''
+          key: String,
+          prompt: String,
+          type: String,
         }
-      ]
+      ],
+      patterns: Array<RegExp>,
+      guarded: Boolean,
+      hidden: Boolean
     });
   }
 
