@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const { CommandoClient } = require('discord.js-commando');
 const path = require('path');
+const mongo = require('./util/mongo');
 const Canvas = require('canvas');
 const { registerFont } = require('canvas');
 registerFont('./assets/fonts/OpenSans.ttf', { family: 'sans-serif' });
@@ -14,6 +15,7 @@ client.registry
   .registerDefaultTypes()
   .registerGroups([
     ['anime', 'Anime!!'],
+    ['economy', 'Economy'],
     ['fun', 'Fun stuff'],
     ['misc', 'Misc!!'],
     ['mod', 'Moderation'],
@@ -31,6 +33,18 @@ client.once('ready', () => {
   client.user.setActivity('with Commando');
 });
 client.on('error', console.error);
+
+client.once('ready', async () => {
+  console.log('Ready!');
+
+  await mongo().then(mongoose => {
+    try {
+      console.log('Mongo connected!');
+    } finally {
+      mongoose.connection.close();
+    }
+  })
+});
 
 // Pass the entire Canvas object because you'll need to access its width, as well its context
 const applyText = (canvas, text) => {
